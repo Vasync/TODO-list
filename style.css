@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('http://fonts.cdnfonts.com/css/photograph-signature');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(225deg, hsla(207, 100%, 64%, 1) 0%, hsla(326, 100%, 83%, 1) 80%);
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  display: flex;
+}
+
+.container {
+  width: 350px;
+  
+  padding: 20px 15px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
+}
+
+.inputbox {
+  width: 100%;
+  position: relative;
+  height: 45px;
+  border-radius: 6px;
+}
+
+.inputbox input {
+  height: 100%;
+  width: 100%;
+  border: solid 2px black;
+  border-radius: 6px;
+  outline: none;
+  color: black;
+  font-size: 16px;
+  padding: 0 40px;
+  padding-right: 130px;
+  font-weight: 600;
+  transition: 0.2s;
+  background-color: transparent;
+}
+
+.inputbox input:focus {
+  border-color: black;
+  color: black;
+}
+
+.inputbox i {
+  position: absolute;
+  top: 7px;
+  font-size: 22px;
+  color: #888;
+}
+
+.inputbox .texticon {
+  left: 15px;
+}
+
+.inputbox .entericon {
+  right: 15px;
+  cursor: pointer;
+}
+
+.inputbox .dateinput {
+  width: 60px;
+  height: 30px;
+  position: absolute;
+  right: 45px;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0;
+  font-size: 10px;
+  background-color: transparent;
+}
+
+.wall {
+  height: 3px;
+  width: 100%;
+  margin-top: 5px;
+  background-color: black;
+  opacity: 0.5;
+  border-radius: 6px;
+}
+
+.wall2 {
+  margin-top: 0;
+}
+
+.wall2 {
+  margin-top: 0;
+}
+
+.count {
+  display: flex;
+  height: 30px;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 600;
+}
+
+.count span {
+  color: #D50808;
+}
+
+.tasksbox {
+  max-height: 220px;
+  overflow: scroll;
+}
+
+.tasksbox::-webkit-scroll-bar {
+  width: 0;
+}
+
+.task {
+  height: 55px;
+  border-bottom: solid 2px #888;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.task:last-child {
+  border-bottom: 0;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  max-width: 200px;
+  overflow-x: scroll;
+  white-space: nowrap;
+}
+
+.text {
+  font-weight: 600;
+  font-size: 16px;
+  color: black;
+  position: relative;
+  transition: 0.2s;
+  overflow: hidden;
+}
+
+.text::before {
+  content: "";
+  left: -100%;
+  width: 100%;
+  height: 3px;
+  background-color: #888;
+  border-radius: 5px;
+  position: absolute;
+  top: 45%;
+  transition: 0.2s;
+}
+
+.check:checked~.text {
+  color: #888;
+}
+
+.check:checked~.text::before {
+  left: 0;
+}
+
+.date {
+  position: absolute;
+  right: 10%;
+  background-color: transparent;
+  padding: 3px 10px;
+  font-weight: 500;
+  font-size: 16px;
+  color: #333;
+}
+
+.del {
+  font-size: 25px;
+  color: #D50808;
+  cursor: pointer;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.filters {
+  display: flex;
+  gap: 8px;
+}
+
+.filters span {
+  font-weight: 600;
+  color: white;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  cursor: pointer;
+}
+
+.filters span.active::after {
+  content: "";
+  position: absolute;
+  background-color: white;
+  height: 3px;
+  width: 100%;
+  bottom: -3px;
+  border-radius: 6px;
+}
+
+.clear {
+  border: solid 2px linear-gradient(90deg, hsla(239, 94%, 14%, 1) 0%, hsla(190, 68%, 50%, 1) 100%);;
+  background: linear-gradient(45deg, hsla(58, 100%, 50%, 1) 0%, hsla(354, 100%, 61%, 1) 50%, hsla(276, 71%, 47%, 1) 100%);
+  opacity: 0.7;
+  padding: 4px 10px;
+  border-radius: 6px;
+  transition: 0.2s;
+  font-weight: 600;
+  font-size: 14px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+.clear i {
+  font-size: 20px
+}
+
+.clear:hover {
+  background: linear-gradient(45deg, hsla(238, 100%, 7%, 1) 0%, hsla(246, 83%, 43%, 1) 80%);
+  color: #000;
+}
+
+h2 {
+  position: absolute;
+  top: 15px;
+  color: #fff;
+}
+
+.product {
+  position: absolute;
+  bottom: 15px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+}
+
+.mark {
+  height: 50px;
+  width: 50px;
+  border: solid 3px #fff;
+  border-radius: 50%;
+  font-size: 30px;
+  line-height: 40px;
+  align-self: center;
+}
+
+.name {
+  font-family: 'Photograph Signature', sans-serif;
+}

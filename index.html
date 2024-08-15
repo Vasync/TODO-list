@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+  <link rel="stylesheet" href="style.css">
+  <title>To-do list</title>
+</head>
+
+<body>
+  <audio id="clicksound">
+        <source src="clicksound.wav" type="audio/wav">
+  </audio>
+  <div class="container" onclick="clicksound()">
+    <div class="inputbox">
+      <i class="uil uil-align-left texticon"></i>
+      <input type="text" placeholder="...">
+      <i class="uil uil-enter entericon"></i>
+      <input type="date" class="dateinput">
+    </div>
+    <div class="wall"></div>
+    <div class="count">
+      <span class="allcount"><span class="num1">0</span> Tasks</span>
+      <span class="pendingcount"><span class="num2">0</span> Pending</span>
+      <span class="completedcount"><span class="num3">0</span> Completed</span>
+    </div>
+    <div class="wall wall2"></div>
+    <div class="tasksbox"></div>
+    <div class="wall wall2"></div>
+    <div class="controls">
+      <div class="filters">
+        <span class="f0 all active" onclick="showingData()">All</span>
+        <span class="f1 pending" onclick="filter(pendingTasks, this, 'yes')">Pending</span>
+        <span class="f2 completed" onclick="filter(completedTasks, this, 'no')">Completed</span>
+      </div>
+      <button class="clear">
+        <i class="uil uil-trash-alt"></i>
+        Clear All
+      </button>
+    </div>
+  </div>
+  <div class="product">
+    <span class="mark">LS</span>
+    <span class="name">LootSpace369</span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
